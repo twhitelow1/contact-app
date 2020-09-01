@@ -4,9 +4,12 @@ while index < @contacts.length
   contact = @contacts[index]
   contact_hash = {
     id: contact.id,
-    title: contact.first_name,
+    first_name: contact.first_name,
+    last_name: contact.last_name
+    email: contact.email,
+    phone: contact.phone_number,
   }
-  json < contact_hash
+  json << contact_hash
   index += 1
 end
 
